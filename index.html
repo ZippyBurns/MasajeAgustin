@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thai & Tantric Massage in Condesa — Bilingual (EN/ES)</title>
+  <meta name="description" content="Independent massage therapist in Condesa offering Thai and Tantric massage. 10+ years experience. Certified by the Thai Ministry of Education. In‑home studio & outcalls." />
+  <meta name="theme-color" content="#0f172a" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thai & Tantric Massage in Condesa" />
+  <meta property="og:description" content="10+ years' experience. Certified by the Thai Ministry of Education. Bilingual: English/Español." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example" />
+  <meta property="og:image" content="/cover.jpg" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #101936;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #8b5cf6;
+      --accent-2: #22d3ee;
+      --ring: #60a5fa44;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+        Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 1200px at 10% 0%, #0f1a3a 0%, var(--bg) 55%, #070b16 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px);
+      background: linear-gradient(180deg, #0b1020ee, #0b102066);
+      border-bottom: 1px solid #2b2f44;
+      z-index: 50;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display:flex; gap:10px; align-items:center; font-weight: 700; letter-spacing:.3px; }
+    .brand .dot { width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 20px #22d3ee44; }
+    nav ul { list-style: none; display:flex; gap: 18px; padding:0; margin:0; }
+    nav a { color: var(--muted); font-weight: 600; }
+    nav a:hover, nav a:focus { color: var(--text); }
+
+    .lang-switch { display:flex; gap: 6px; align-items:center; }
+    .lang-switch button {
+      background: transparent; border: 1px solid #32406b; color: var(--muted); padding: 6px 10px; border-radius: 10px; cursor: pointer; font-weight: 700;
+    }
+    .lang-switch button.active { border-color: var(--accent); color: var(--text); box-shadow: 0 0 0 4px var(--ring); }
+
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap: 32px; padding: 56px 0 26px; align-items:center; }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height:1.1; margin: 0 0 10px; }
+    .hero p.lead { color: #cbd5e1; font-size: clamp(16px, 2.2vw, 20px); }
+    .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
+    .badge { border: 1px solid #33406b; color:#dbeafe; background: #0c1530; padding:6px 10px; border-radius:999px; font-size: 12px; letter-spacing:.2px; }
+
+    .cta-row { display:flex; flex-wrap:wrap; gap:12px; margin-top: 20px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#0b1020; border:none; padding:12px 16px; border-radius: 12px; font-weight:800; cursor:pointer; }
+    .btn.secondary { background: transparent; border:1px solid #32406b; color: var(--text); }
+
+    .card { background: linear-gradient(180deg, #0f1733, var(--card)); border: 1px solid #253055; border-radius: 16px; padding: 18px; box-shadow: 0 8px 30px #00000040; }
+    .grid { display:grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: 1/-1; }
+
+    section { padding: 30px 0; }
+    h2 { font-size: clamp(22px, 3.2vw, 32px); margin: 0 0 12px; }
+    h3 { margin: 6px 0; }
+    .muted { color: var(--muted); }
+
+    .list { padding-left: 18px; margin: 8px 0; }
+
+    .price {
+      display:flex; align-items: baseline; gap: 8px; font-size: 22px; font-weight: 800; color:#c7d2fe;
+    }
+    .pill { border:1px solid #374374; padding:4px 8px; border-radius: 999px; font-size: 12px; color:#cbd5e1; }
+
+    .map iframe { width:100%; height: 260px; border:0; border-radius: 14px; filter: saturate(110%) contrast(105%); }
+
+    footer { padding: 40px 0 70px; color: var(--muted); }
+    footer a:hover { color: var(--text); }
+    /* Gallery */
+    .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 12px; }
+    .gallery-item { grid-column: span 4; }
+    .gallery-item img { width: 100%; height: 260px; object-fit: cover; border-radius: 14px; border: 1px solid #253055; display: block; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .span-4 { grid-column: span 12; }
+      .span-6 { grid-column: span 12; }
+      .span-8 { grid-column: span 12; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Home">
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="brand">Massage in Condesa</span>
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#rates" data-i18n="nav_rates">Rates</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Gallery<\/a><\/li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact<\/a><\/li>
+        </ul>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <button id="lang-en" class="active" data-lang="en" aria-pressed="true">EN</button>
+        <button id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div>
+        <h1 data-i18n="hero_title">Thai &amp; Tantric Massage in Condesa</h1>
+        <p class="lead" data-i18n="hero_sub">10+ years of experience • Certified by the Thai Ministry of Education • In‑home studio &amp; outcalls across CDMX</p>
+        <div class="badges">
+          <span class="badge" data-i18n="badge_years">10+ years experience</span>
+          <span class="badge" data-i18n="badge_cert">Thai Ministry of Education certified</span>
+          <span class="badge" data-i18n="badge_bilingual">English / Español</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn" id="cta-whatsapp" href="https://wa.me/52XXXXXXXXXX?text=Hola%20me%20gustar%C3%ADa%20agendar%20un%20masaje" target="_blank" rel="noopener" data-i18n="cta_whatsapp" aria-label="Book via WhatsApp">Book on WhatsApp</a>
+          <a class="btn secondary" href="#contact" data-i18n="cta_contact">See contact & details</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="box_title">In‑home studio in Condesa</h3>
+        <p class="muted" data-i18n="box_copy">Quiet, clean, and private space with fresh linens, natural oils, and music. Outcalls available to hotels and homes throughout Mexico City.</p>
+        <ul class="list">
+          <li data-i18n="box_li1">Same‑day appointments when available</li>
+          <li data-i18n="box_li2">Professional draping & boundaries</li>
+          <li data-i18n="box_li3">Card payments available (ask in advance)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-label="Services">
+      <h2 data-i18n="services_h2">Services</h2>
+      <div class="grid">
+        <article class="card span-6" aria-labelledby="svc-thai">
+          <h3 id="svc-thai" data-i18n="svc_thai_h3">Traditional Thai Massage</h3>
+          <p class="muted" data-i18n="svc_thai_p1">A dynamic, fully clothed bodywork on a mat that blends acupressure, assisted stretches, and rhythmic compression to open mobility and calm the nervous system.</p>
+          <ul class="list">
+            <li data-i18n="svc_thai_li1">Session on a floor mat; wear comfortable clothing</li>
+            <li data-i18n="svc_thai_li2">Helps with posture, flexibility, and stress</li>
+            <li data-i18n="svc_thai_li3">Pressure tailored from gentle to deep</li>
+          </ul>
+        </article>
+
+        <article class="card span-6" aria-labelledby="svc-tantric">
+          <h3 id="svc-tantric" data-i18n="svc_tantric_h3">Tantric Massage</h3>
+          <p class="muted" data-i18n="svc_tantric_p1">A slow, mindful full‑body massage that integrates breathwork and presence. The focus is relaxation, grounding, and body awareness within clear, professional boundaries.</p>
+          <ul class="list">
+            <li data-i18n="svc_tantric_li1">Oil‑based table session</li>
+            <li data-i18n="svc_tantric_li2">Guided breathing to settle the mind</li>
+            <li data-i18n="svc_tantric_li3">Non‑sexual. Consent and comfort first.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- RATES -->
+    <section id="rates" aria-label="Rates">
+      <h2 data-i18n="rates_h2">Rates</h2>
+      <div class="grid">
+        <div class="card span-4">
+          <h3 data-i18n="rate_studio">Studio (Condesa)</h3>
+          <p class="price"><span data-i18n="rate_studio_price">MXN $____ / 60 min</span> <span class="pill" data-i18n="rate_best">popular</span></p>
+          <p class="muted" data-i18n="rate_studio_note">Add 30/90‑min options as desired.</p>
+        </div>
+        <div class="card span-4">
+          <h3 data-i18n="rate_outcall">Outcall (CDMX)</h3>
+          <p class="price"><span data-i18n="rate_outcall_price">MXN $____ / 60 min</span> <span class="pill" data-i18n="rate_varies">+ travel</span></p>
+          <p class="muted" data-i18n="rate_outcall_note">Travel fee varies by distance & parking.</p>
+        </div>
+        <div class="card span-4">
+          <h3 data-i18n="rate_packages">Packages</h3>
+          <p class="price" data-i18n="rate_packages_price">Ask about 3‑ or 5‑session packages.</p>
+          <p class="muted" data-i18n="rate_packages_note">Great for ongoing mobility & stress relief.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-label="About">
+      <h2 data-i18n="about_h2">About</h2>
+      <div class="grid">
+        <div class="card span-8">
+          <p data-i18n="about_p1">I have over a decade of hands‑on practice and professional training in Thailand and beyond. My certification is recognized by the Thai Ministry of Education. Sessions are customized to your needs—grounded, attentive, and trauma‑sensitive.</p>
+          <ul class="list">
+            <li data-i18n="about_li1">Cleanliness: fresh linens, sanitized equipment</li>
+            <li data-i18n="about_li2">Inclusivity: all genders & orientations welcome</li>
+            <li data-i18n="about_li3">Communication: check‑ins on pressure & comfort</li>
+          </ul>
+        </div>
+        <aside class="card span-4">
+          <h3 data-i18n="policies_h3">Policies</h3>
+          <ul class="list">
+            <li data-i18n="pol_li1">By appointment only</li>
+            <li data-i18n="pol_li2">24‑hour reschedule window when possible</li>
+            <li data-i18n="pol_li3">Non‑sexual services; zero‑tolerance policy</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- LOCATION / CONTACT -->
+    <section id="contact" aria-label="Contact & Location">
+      <h2 data-i18n="contact_h2">Contact & Location</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <h3 data-i18n="contact_h3">Book a Session</h3>
+          <p class="muted" data-i18n="contact_copy">For fastest response, message me on WhatsApp with your preferred day/time, location (Condesa studio or outcall), and session length.</p>
+          <p>
+            <a class="btn" id="cta-whatsapp-2" href="https://wa.me/52XXXXXXXXXX?text=Hola%20me%20gustar%C3%ADa%20agendar%20un%20masaje" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Book on WhatsApp</a>
+            <a class="btn secondary" href="mailto:youremail@example.com?subject=Massage%20Booking" data-i18n="cta_email">Email me</a>
+          </p>
+          <p class="muted"><strong data-i18n="hours_strong">Hours:</strong> <span data-i18n="hours">Mon–Sun, 10:00–20:00 (by appointment)</span></p>
+        </div>
+        <div class="card span-6 map">
+          <h3 data-i18n="location_h3">Condesa Studio (CDMX)</h3>
+          <p class="muted" data-i18n="location_copy">Exact address provided upon booking. Easy access from Roma, Juárez, and Polanco.</p>
+          <iframe title="Map of Condesa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Condesa%2C%20Ciudad%20de%20M%C3%A9xico&z=14&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" aria-label="Gallery">
+      <h2 data-i18n="gallery_h2">Gallery</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item"><a href="images/gratitude.jpg" target="_blank" rel="noopener"><img src="images/gratitude.jpg" alt="Meditative prayer pose outdoors" loading="lazy"></a></figure>
+        <figure class="gallery-item"><a href="images/smelling-flower.jpg" target="_blank" rel="noopener"><img src="images/smelling-flower.jpg" alt="Smelling a flower among greenery" loading="lazy"></a></figure>
+        <figure class="gallery-item"><a href="images/bamboo.jpg" target="_blank" rel="noopener"><img src="images/bamboo.jpg" alt="Portrait among bamboo" loading="lazy"></a></figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-label="FAQ">
+      <h2 data-i18n="faq_h2">FAQ</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <h3 data-i18n="faq_what_h3">What should I expect?</h3>
+          <p class="muted" data-i18n="faq_what_p">We'll review your goals and any injuries, agree on pressure and focus areas, and ensure clear consent and comfort. You are welcome to give feedback anytime.</p>
+        </div>
+        <div class="card span-6">
+          <h3 data-i18n="faq_health_h3">Health & contraindications</h3>
+          <p class="muted" data-i18n="faq_health_p">Please let me know about recent surgeries, pregnancy, cardiovascular conditions, or acute injuries. Some cases may require a physician’s approval.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p><strong data-i18n="footer_name">Independent Massage Therapist — Condesa, CDMX</strong></p>
+        <p class="muted" data-i18n="footer_disclaimer">Bodywork for relaxation and wellbeing. Not a substitute for medical care. Non‑sexual services only.</p>
+        <p class="muted">© <span id="year"></span> • <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Structured Data (edit placeholders) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "additionalType": "https://schema.org/MassageTherapist",
+    "name": "Thai & Tantric Massage in Condesa",
+    "description": "Independent massage therapist offering Thai and Tantric massage in Condesa and outcalls across CDMX. 10+ years of experience; certified by the Thai Ministry of Education.",
+    "areaServed": "Ciudad de México",
+    "address": {"@type":"PostalAddress","addressLocality":"Condesa","addressRegion":"CDMX","addressCountry":"MX"},
+    "telephone": "+52XXXXXXXXXX",
+    "email": "youremail@example.com",
+    "url": "https://your-domain.example",
+    "openingHours": "Mo-Su 10:00-20:00",
+    "paymentAccepted": "Cash, Card, Transfer"
+  }
+  </script>
+
+  <script>
+    const i18n = {
+      en: {
+        brand: "Massage in Condesa",
+        nav_services: "Services",
+        nav_rates: "Rates",
+        nav_about: "About",
+        nav_contact: "Contact",
+        nav_gallery: "Gallery",
+        gallery_h2: "Gallery",
+        hero_title: "Thai & Tantric Massage in Condesa",
+        hero_sub: "10+ years of experience • Certified by the Thai Ministry of Education • In‑home studio & outcalls across CDMX",
+        badge_years: "10+ years experience",
+        badge_cert: "Thai Ministry of Education certified",
+        badge_bilingual: "English / Español",
+        cta_whatsapp: "Book on WhatsApp",
+        cta_contact: "See contact & details",
+        box_title: "In‑home studio in Condesa",
+        box_copy: "Quiet, clean, and private space with fresh linens, natural oils, and music. Outcalls available to hotels and homes throughout Mexico City.",
+        box_li1: "Same‑day appointments when available",
+        box_li2: "Professional draping & boundaries",
+        box_li3: "Card payments available (ask in advance)",
+        services_h2: "Services",
+        svc_thai_h3: "Traditional Thai Massage",
+        svc_thai_p1: "A dynamic, fully clothed bodywork on a mat that blends acupressure, assisted stretches, and rhythmic compression to open mobility and calm the nervous system.",
+        svc_thai_li1: "Session on a floor mat; wear comfortable clothing",
+        svc_thai_li2: "Helps with posture, flexibility, and stress",
+        svc_thai_li3: "Pressure tailored from gentle to deep",
+        svc_tantric_h3: "Tantric Massage",
+        svc_tantric_p1: "A slow, mindful full‑body massage that integrates breathwork and presence. The focus is relaxation, grounding, and body awareness within clear, professional boundaries.",
+        svc_tantric_li1: "Oil‑based table session",
+        svc_tantric_li2: "Guided breathing to settle the mind",
+        svc_tantric_li3: "Non‑sexual. Consent and comfort first.",
+        rates_h2: "Rates",
+        rate_studio: "Studio (Condesa)",
+        rate_studio_price: "MXN $____ / 60 min",
+        rate_best: "popular",
+        rate_studio_note: "Add 30/90‑min options as desired.",
+        rate_outcall: "Outcall (CDMX)",
+        rate_outcall_price: "MXN $____ / 60 min",
+        rate_varies: "+ travel",
+        rate_outcall_note: "Travel fee varies by distance & parking.",
+        rate_packages: "Packages",
+        rate_packages_price: "Ask about 3‑ or 5‑session packages.",
+        rate_packages_note: "Great for ongoing mobility & stress relief.",
+        about_h2: "About",
+        about_p1: "I have over a decade of hands‑on practice and professional training in Thailand and beyond. My certification is recognized by the Thai Ministry of Education. Sessions are customized to your needs—grounded, attentive, and trauma‑sensitive.",
+        about_li1: "Cleanliness: fresh linens, sanitized equipment",
+        about_li2: "Inclusivity: all genders & orientations welcome",
+        about_li3: "Communication: check‑ins on pressure & comfort",
+        policies_h3: "Policies",
+        pol_li1: "By appointment only",
+        pol_li2: "24‑hour reschedule window when possible",
+        pol_li3: "Non‑sexual services; zero‑tolerance policy",
+        contact_h2: "Contact & Location",
+        contact_h3: "Book a Session",
+        contact_copy: "For fastest response, message me on WhatsApp with your preferred day/time, location (Condesa studio or outcall), and session length.",
+        cta_email: "Email me",
+        hours_strong: "Hours:",
+        hours: "Mon–Sun, 10:00–20:00 (by appointment)",
+        location_h3: "Condesa Studio (CDMX)",
+        location_copy: "Exact address provided upon booking. Easy access from Roma, Juárez, and Polanco.",
+        faq_h2: "FAQ",
+        faq_what_h3: "What should I expect?",
+        faq_what_p: "We'll review your goals and any injuries, agree on pressure and focus areas, and ensure clear consent and comfort. You are welcome to give feedback anytime.",
+        faq_health_h3: "Health & contraindications",
+        faq_health_p: "Please let me know about recent surgeries, pregnancy, cardiovascular conditions, or acute injuries. Some cases may require a physician’s approval.",
+        footer_name: "Independent Massage Therapist — Condesa, CDMX",
+        footer_disclaimer: "Bodywork for relaxation and wellbeing. Not a substitute for medical care. Non‑sexual services only."
+      },
+      es: {
+        brand: "Masaje en la Condesa",
+        nav_services: "Servicios",
+        nav_rates: "Tarifas",
+        nav_about: "Sobre mí",
+        nav_contact: "Contacto",
+        nav_gallery: "Galería",
+        gallery_h2: "Galería",
+        hero_title: "Masaje Tailandés y Tántrico en la Condesa",
+        hero_sub: "Más de 10 años de experiencia • Certificación del Ministerio de Educación de Tailandia • Estudio en casa y a domicilio en CDMX",
+        badge_years: "+10 años de experiencia",
+        badge_cert: "Certificada/o por el Ministerio de Educación de Tailandia",
+        badge_bilingual: "English / Español",
+        cta_whatsapp: "Reservar por WhatsApp",
+        cta_contact: "Ver contacto y detalles",
+        box_title: "Estudio en casa en la Condesa",
+        box_copy: "Espacio tranquilo, limpio y privado con sábanas frescas, aceites naturales y música. A domicilio a hoteles y casas en toda la CDMX.",
+        box_li1: "Citas el mismo día cuando haya disponibilidad",
+        box_li2: "Protocolos profesionales de cobertura y límites",
+        box_li3: "Pago con tarjeta disponible (consultar)",
+        services_h2: "Servicios",
+        svc_thai_h3: "Masaje Tradicional Tailandés",
+        svc_thai_p1: "Trabajo corporal dinámico con ropa sobre tapete que combina acupresión, estiramientos asistidos y compresión rítmica para abrir la movilidad y calmar el sistema nervioso.",
+        svc_thai_li1: "Sesión en tapete; usa ropa cómoda",
+        svc_thai_li2: "Apoya postura, flexibilidad y manejo de estrés",
+        svc_thai_li3: "Presión ajustada de suave a profunda",
+        svc_tantric_h3: "Masaje Tántrico",
+        svc_tantric_p1: "Masaje corporal completo, lento y consciente que integra respiración y presencia. Enfoque en relajación, enraizamiento y conciencia corporal con límites profesionales claros.",
+        svc_tantric_li1: "Sesión con aceite en camilla",
+        svc_tantric_li2: "Respiración guiada para calmar la mente",
+        svc_tantric_li3: "No sexual. Primero el consentimiento y la comodidad.",
+        rates_h2: "Tarifas",
+        rate_studio: "Estudio (Condesa)",
+        rate_studio_price: "MXN $____ / 60 min",
+        rate_best: "popular",
+        rate_studio_note: "Agrega opciones de 30/90 min si deseas.",
+        rate_outcall: "A domicilio (CDMX)",
+        rate_outcall_price: "MXN $____ / 60 min",
+        rate_varies: "+ traslado",
+        rate_outcall_note: "El cargo por traslado depende de la distancia y estacionamiento.",
+        rate_packages: "Paquetes",
+        rate_packages_price: "Pregunta por paquetes de 3 o 5 sesiones.",
+        rate_packages_note: "Ideal para movilidad continua y manejo de estrés.",
+        about_h2: "Sobre mí",
+        about_p1: "Tengo más de una década de práctica y formación profesional en Tailandia y otros países. Mi certificación está reconocida por el Ministerio de Educación de Tailandia. Cada sesión se adapta a tus necesidades: con presencia, cuidado y sensibilidad al trauma.",
+        about_li1: "Higiene: sábanas limpias, equipo sanitizado",
+        about_li2: "Inclusión: todas las identidades y orientaciones bienvenidas",
+        about_li3: "Comunicación: revisiones de presión y comodidad",
+        policies_h3: "Políticas",
+        pol_li1: "Solo con cita",
+        pol_li2: "Reagendaciones con 24 h cuando sea posible",
+        pol_li3: "Servicios no sexuales; política de cero tolerancia",
+        contact_h2: "Contacto y Ubicación",
+        contact_h3: "Agenda tu sesión",
+        contact_copy: "Para respuesta más rápida, escríbeme por WhatsApp con tu día/horario preferido, ubicación (estudio en Condesa o a domicilio) y duración.",
+        cta_email: "Envíame un correo",
+        hours_strong: "Horarios:",
+        hours: "Lun–Dom, 10:00–20:00 (con cita)",
+        location_h3: "Estudio en la Condesa (CDMX)",
+        location_copy: "La dirección exacta se comparte al reservar. Fácil acceso desde Roma, Juárez y Polanco.",
+        faq_h2: "Preguntas frecuentes",
+        faq_what_h3: "¿Qué puedo esperar?",
+        faq_what_p: "Revisaremos tus objetivos y lesiones, acordaremos la presión y zonas de enfoque, y cuidaremos el consentimiento y la comodidad. Puedes dar retroalimentación en cualquier momento.",
+        faq_health_h3: "Salud y contraindicaciones",
+        faq_health_p: "Por favor, comparte cirugías recientes, embarazo, condiciones cardiovasculares o lesiones agudas. Algunos casos pueden requerir autorización médica.",
+        footer_name: "Terapeuta de Masaje Independiente — Condesa, CDMX",
+        footer_disclaimer: "Trabajo corporal para relajación y bienestar. No sustituye atención médica. Servicios no sexuales."
+      }
+    };
+
+    const els = document.querySelectorAll('[data-i18n]');
+    const btnEn = document.getElementById('lang-en');
+    const btnEs = document.getElementById('lang-es');
+    const yearEl = document.getElementById('year');
+    yearEl.textContent = new Date().getFullYear();
+
+    function setLang(lang){
+      const dict = i18n[lang] || i18n.en;
+      els.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+      // Toggle button state
+      btnEn.classList.toggle('active', lang === 'en');
+      btnEs.classList.toggle('active', lang === 'es');
+      btnEn.setAttribute('aria-pressed', String(lang==='en'));
+      btnEs.setAttribute('aria-pressed', String(lang==='es'));
+      // Update WhatsApp preset text
+      const wa1 = document.getElementById('cta-whatsapp');
+      const wa2 = document.getElementById('cta-whatsapp-2');
+      const text = lang==='es' ?
+        'Hola%20me%20gustar%C3%ADa%20agendar%20un%20masaje' :
+        'Hi%2C%20I%27d%20like%20to%20book%20a%20massage';
+      [wa1, wa2].forEach(a => {
+        if(!a) return;
+        try { a.href = a.href.replace(/(text=).*/, '$1'+text); } catch(e){}
+      });
+    }
+
+    btnEn.addEventListener('click', () => setLang('en'));
+    btnEs.addEventListener('click', () => setLang('es'));
+
+    // Init language from saved pref or browser
+    const saved = localStorage.getItem('lang');
+    const browserLang = (navigator.language || 'en').startsWith('es') ? 'es' : 'en';
+    setLang(saved || browserLang);
+  </script>
+</body>
+</html>
