@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +42,8 @@
     .lang-switch button.active{border-color:var(--accent-2);color:var(--text);box-shadow:0 0 0 4px var(--ring)}
 
     /* Sections */
-    main section{padding:30px 0}
+    main section{padding:24px 0}
+    .hero{padding:18px 0 10px}
     h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:0 0 8px}
     h2{font-size:clamp(22px,3.2vw,30px);margin:0 0 10px}
     .lead{color:#5a4a42;font-size:clamp(16px,2.2vw,19px)}
@@ -65,6 +66,16 @@
 
     .price{display:flex;align-items:baseline;gap:8px;font-size:22px;font-weight:800;color:var(--accent)}
     .pill{border:1px solid var(--line);padding:4px 8px;border-radius:999px;font-size:12px;color:#6b4f3f}
+
+    /* Flow images */
+    .card-img{width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block;margin-bottom:10px}
+    .flow-img-full{margin:8px 0 20px}
+    .flow-img-full img{width:100%;max-height:520px;object-fit:cover;border-radius:14px;border:1px solid var(--line);display:block}
+
+    /* Hero split with side image (no crop) */
+    .hero-split{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+    .hero-img{justify-self:end}
+    .hero-img img{width:100%;height:auto;max-width:420px;max-height:360px;object-fit:contain;border-radius:12px;border:1px solid var(--line);display:block}
 
     .map iframe{width:100%;height:260px;border:0;border-radius:14px;border:1px solid var(--line);filter:saturate(105%) contrast(102%)}
 
@@ -100,8 +111,8 @@
   <main id="top" class="container">
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
-      <div class="grid">
-        <div class="span-8">
+      <div class="hero-split">
+        <div class="intro">
           <h1 data-i18n="hero_title">Thai Massage & Aromatherapy Oil Massage</h1>
           <p class="lead" data-i18n="hero_sub">Condesa studio & outcalls in CDMX • 10+ years experience • Certified by the Thai Ministry of Education</p>
           <div class="badges">
@@ -113,15 +124,7 @@
             <a class="btn secondary" id="cta-maps" href="https://maps.google.com/?cid=YOUR_PLACE_CID" target="_blank" rel="noopener" data-i18n="cta_maps">View on Google Maps</a>
           </p>
         </div>
-        <aside class="card span-4">
-          <h3 data-i18n="box_title">Estudio Agustín — Condesa</h3>
-          <p class="muted" data-i18n="box_copy">Calm, clean, and welcoming space. Aroma blends and music available. Outcalls to homes and hotels across CDMX.</p>
-          <ul class="list">
-            <li data-i18n="box_li1">Same‑day appointments when available</li>
-            <li data-i18n="box_li2">Payment by cash/transfer; card on request</li>
-            <li data-i18n="box_li3">Gift certificates on request</li>
-          </ul>
-        </aside>
+        <figure class="hero-img" aria-hidden="true"><img src="images/gratitude.jpg" alt="Quiet gratitude pose outdoors" loading="lazy"></figure>
       </div>
     </section>
 
@@ -148,6 +151,16 @@
             <li data-i18n="svc_oil_li3">Focus areas by request</li>
           </ul>
         </article>
+
+        <article class="card span-6" aria-labelledby="svc-reflex">
+          <h3 id="svc-reflex" data-i18n="svc_reflex_h3">Reflexology Foot Massage</h3>
+          <p class="muted" data-i18n="svc_reflex_p1">Focused foot massage using acupressure points to balance the body and relieve stress; includes warm towels.</p>
+          <ul class="list">
+            <li data-i18n="svc_reflex_li1">40 / 60 minutes</li>
+            <li data-i18n="svc_reflex_li2">Can combine with oil massage</li>
+            <li data-i18n="svc_reflex_li3">Ideal for fatigue and jet lag</li>
+          </ul>
+        </article>
       </div>
 
       <div class="card span-12" style="margin-top:12px">
@@ -156,23 +169,25 @@
       </div>
     </section>
 
+    <figure class="flow-img-full" aria-hidden="true"><img src="images/bamboo.jpg" alt="Bamboo grove scene" loading="lazy"></figure>
+
     <!-- RATES -->
     <section id="rates" aria-label="Rates">
       <h2 data-i18n="rates_h2">Rates</h2>
       <div class="grid">
         <div class="card span-4">
           <h3 data-i18n="rate_studio">Studio (Condesa)</h3>
-          <p class="price"><span data-i18n="rate_studio_price">MXN $____ / 60 min</span> <span class="pill" data-i18n="rate_best">popular</span></p>
+          <p class="price"><span data-i18n="rate_studio_price">MXN $1200 / 60 min</span> <span class="pill" data-i18n="rate_best">popular</span></p>
           <p class="muted" data-i18n="rate_studio_note">90‑min option available.</p>
         </div>
         <div class="card span-4">
           <h3 data-i18n="rate_outcall">Outcall (CDMX)</h3>
-          <p class="price"><span data-i18n="rate_outcall_price">MXN $____ / 60 min</span> <span class="pill" data-i18n="rate_varies">+ travel</span></p>
+          <p class="price"><span data-i18n="rate_outcall_price">MXN $1700 / 60 min</span> <span class="pill" data-i18n="rate_varies">+ travel</span></p>
           <p class="muted" data-i18n="rate_outcall_note">Travel fee varies by distance & parking.</p>
         </div>
         <div class="card span-4">
           <h3 data-i18n="rate_addon">Hot Stones Add‑on</h3>
-          <p class="price" data-i18n="rate_addon_price">MXN $____ per session</p>
+          <p class="price" data-i18n="rate_addon_price">MXN $250 per session</p>
           <p class="muted" data-i18n="rate_addon_note">Please request when booking.</p>
         </div>
       </div>
@@ -186,12 +201,13 @@
           <h3 data-i18n="contact_h3">Book a Session</h3>
           <p class="muted" data-i18n="contact_copy">Message me on WhatsApp with your preferred day/time, location (studio or outcall), session length, and if you want hot stones.</p>
           <p>
-            <a class="btn" id="cta-whatsapp-2" href="https://wa.me/52XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Book on WhatsApp</a>
+            <a class="btn" id="cta-whatsapp-2" href="https://wa.me/17025132404?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Book on WhatsApp</a>
             <a class="btn secondary" id="cta-maps-2" href="https://maps.google.com/?cid=YOUR_PLACE_CID" target="_blank" rel="noopener" data-i18n="cta_maps">View on Google Maps</a>
           </p>
           <p class="muted"><strong data-i18n="hours_strong">Hours:</strong> <span data-i18n="hours">Mon–Sun, 10:00–20:00 (by appointment)</span></p>
         </div>
         <div class="card span-6 map">
+          <img class="card-img" src="images/smelling-flower.jpg" alt="Smelling a flower among greenery" loading="lazy">
           <h3 data-i18n="location_h3">Condesa, CDMX</h3>
           <p class="muted" data-i18n="location_copy">Exact address is shared upon booking. See the map listing for directions and reviews.</p>
           <iframe title="Map of Condesa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Condesa%2C%20Ciudad%20de%20M%C3%A9xico&z=14&output=embed"></iframe>
@@ -246,7 +262,7 @@
         box_li3: "Gift certificates on request",
         services_h2: "Services",
         svc_thai_h3: "Thai Massage",
-        svc_thai_p1: "Floor‑mat session with stretching, acupressure, and rhythmic compression to improve mobility and ease tension. Wear comfortable clothing.",
+        svc_thai_p1: "Table massage session with stretching, acupressure, and rhythmic compression to improve mobility and ease tension. Wear comfortable clothing.",
         svc_thai_li1: "60 / 90 minutes",
         svc_thai_li2: "Pressure adjusted to your preference",
         svc_thai_li3: "Great for flexibility and posture",
@@ -255,19 +271,24 @@
         svc_oil_li1: "60 / 90 minutes",
         svc_oil_li2: "Custom essential‑oil blends",
         svc_oil_li3: "Focus areas by request",
+        svc_reflex_h3: "Reflexology Foot Massage",
+        svc_reflex_p1: "Focused foot massage using acupressure points to balance the body and relieve stress; includes warm towels.",
+        svc_reflex_li1: "40 / 60 minutes",
+        svc_reflex_li2: "Can combine with oil massage",
+        svc_reflex_li3: "Ideal for fatigue and jet lag",
         addon_h3: "Add‑on: Hot Stones",
         addon_p: "Smooth heated stones can be integrated into either session to deepen relaxation and melt muscle tension. Please request in advance.",
         rates_h2: "Rates",
         rate_studio: "Studio (Condesa)",
-        rate_studio_price: "MXN $____ / 60 min",
+        rate_studio_price: "MXN $1200 / 60 min",
         rate_best: "popular",
         rate_studio_note: "90‑min option available.",
         rate_outcall: "Outcall (CDMX)",
-        rate_outcall_price: "MXN $____ / 60 min",
+        rate_outcall_price: "MXN $1800 / 60 min",
         rate_varies: "+ travel",
         rate_outcall_note: "Travel fee varies by distance & parking.",
         rate_addon: "Hot Stones Add‑on",
-        rate_addon_price: "MXN $____ per session",
+        rate_addon_price: "MXN $250 per session",
         rate_addon_note: "Please request when booking.",
         contact_h2: "Contact & Location",
         contact_h3: "Book a Session",
@@ -295,7 +316,7 @@
         box_li3: "Certificados de regalo bajo solicitud",
         services_h2: "Servicios",
         svc_thai_h3: "Masaje Tailandés",
-        svc_thai_p1: "Sesión en tapete con estiramientos, acupresión y compresiones rítmicas para mejorar movilidad y aliviar tensión. Usa ropa cómoda.",
+        svc_thai_p1: "Sesión en mesa con estiramientos, acupresión y compresiones rítmicas para mejorar movilidad y aliviar tensión. Usa ropa cómoda.",
         svc_thai_li1: "60 / 90 minutos",
         svc_thai_li2: "Presión ajustada a tu preferencia",
         svc_thai_li3: "Excelente para flexibilidad y postura",
@@ -304,19 +325,24 @@
         svc_oil_li1: "60 / 90 minutos",
         svc_oil_li2: "Mezclas de aceites esenciales a medida",
         svc_oil_li3: "Zonas de enfoque a solicitud",
+        svc_reflex_h3: "Reflexología Podal",
+        svc_reflex_p1: "Masaje de pies enfocado en puntos de acupresión para equilibrar el cuerpo y aliviar el estrés; incluye toallas tibias.",
+        svc_reflex_li1: "40 / 60 minutos",
+        svc_reflex_li2: "Se puede combinar con masaje con aceite",
+        svc_reflex_li3: "Ideal para cansancio y jet lag",
         addon_h3: "Complemento: Piedras Calientes",
         addon_p: "Piedras lisas y calientes se integran en cualquiera de las sesiones para profunda relajación y liberar tensión muscular. Solicítalo con anticipación.",
         rates_h2: "Tarifas",
         rate_studio: "Estudio (Condesa)",
-        rate_studio_price: "MXN $____ / 60 min",
+        rate_studio_price: "MXN $1200 / 60 min",
         rate_best: "popular",
         rate_studio_note: "Opción de 90 min disponible.",
         rate_outcall: "A domicilio (CDMX)",
-        rate_outcall_price: "MXN $____ / 60 min",
+        rate_outcall_price: "MXN $1800 / 60 min",
         rate_varies: "+ traslado",
         rate_outcall_note: "El cargo por traslado depende de la distancia y estacionamiento.",
         rate_addon: "Complemento de Piedras Calientes",
-        rate_addon_price: "MXN $____ por sesión",
+        rate_addon_price: "MXN $250 por sesión",
         rate_addon_note: "Solicítalo al reservar.",
         contact_h2: "Contacto y Ubicación",
         contact_h3: "Agenda tu sesión",
