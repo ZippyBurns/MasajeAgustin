@@ -102,8 +102,9 @@
         </ul>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language selector">
-        <button id="lang-en" class="active" data-lang="en" aria-pressed="true">EN</button>
-        <button id="lang-es" data-lang="es" aria-pressed="false">ES</button>
+        <button id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+        <button id="lang-es" class="active" data-lang="es" aria-pressed="true">ES</button>
+        
       </div>
     </div>
   </header>
@@ -380,7 +381,7 @@
 
     btnEn.addEventListener('click', () => setLang('en'));
     btnEs.addEventListener('click', () => setLang('es'));
-    setLang(localStorage.getItem('lang') || ((navigator.language||'en').startsWith('es')?'es':'en'));
+    setLang(localStorage.getItem('lang') || 'es');
   </script>
 </body>
 </html>
